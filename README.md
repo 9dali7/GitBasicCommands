@@ -92,6 +92,18 @@ gh pr create --base main --head my-feature-branch --title "Title of the PR" --bo
 
 ## Approvation Steps If Admin Of Repo:
 
+0: If One The Same Device, Switch Accounts From Member To Admin:
+```
+gh auth logout
+```
+```
+gh auth login
+```
+or just use:
+```
+gh auth login --profile <profile-name>
+```
+
 1: Review Pending Pull Requests (admin):
 ```
 gh pr list --repo organization-name/repository-name
