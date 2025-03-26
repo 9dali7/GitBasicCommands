@@ -5,6 +5,25 @@
 winget install Git.MinGit GitHub.cli
 ```
 
+## Ubuntu Installation
+1: Add The GitHub CLI Repository
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+```
+```
+sudo apt-add-repository https://cli.github.com/packages
+```
+
+2: Update Package List
+```
+sudo apt update
+```
+
+3: Install Git & GitHub CLI
+```
+sudo apt install -y git gh
+```
+
 ## Git & GitHub Setup
 
 1: Authenticate on GitHub with the gh command:
@@ -104,7 +123,12 @@ or just use:
 gh auth login --profile <profile-name>
 ```
 
-1: Review Pending Pull Requests (admin):
+1.1: List Pull Request (admin):
+```
+gh pr list
+```
+
+1.2: Review Pending Pull Requests (admin):
 ```
 gh pr list --repo organization-name/repository-name
 ```
